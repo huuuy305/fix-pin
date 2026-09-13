@@ -1,0 +1,9 @@
+Package: com.huuy305.replaced
+Name: replaced
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Description: Cosmetic battery percentage display tweak
+Maintainer: huuy305
+Author: huuy305
+Section: Tweaks
+Depends: firmware (>= 15.0)
