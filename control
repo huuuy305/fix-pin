@@ -1,8 +1,8 @@
 Package: com.huuy305.pin95
 Name: Pin95
-Version: 1.0.0
+Version: 1.1.0
 Architecture: iphoneos-arm64
-Description: Cosmetic battery percentage display tweak
+Description: Cosmetic battery health display tweak for iOS 18
 Maintainer: huuy305
 Author: huuy305
 Section: Tweaks
