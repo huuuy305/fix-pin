@@ -1,6 +1,6 @@
-Package: com.huuy305.replaced
-Name: replaced
-Version: 1.0.1
+Package: com.huuy305.pin95
+Name: Pin95
+Version: 1.0.0
 Architecture: iphoneos-arm64
 Description: Cosmetic battery percentage display tweak
 Maintainer: huuy305
