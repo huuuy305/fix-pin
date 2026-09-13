@@ -1,0 +1,38 @@
+name: Build Roothide deb
+
+'on':
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          brew install ldid dpkg
+
+      - name: Install Roothide Theos
+        run: |
+          git clone --recursive https://github.com/roothide/theos.git "$HOME/theos"
+
+      - name: Check project files
+        run: |
+          pwd
+          find . -maxdepth 3 -type f -print
+
+      - name: Build package
+        run: |
+          export THEOS="$HOME/theos"
+          export THEOS_PACKAGE_SCHEME=roothide
+          make clean
+          make package FINALPACKAGE=1
+
+      - name: Upload deb
+        uses: actions/upload-artifact@v4
+        with:
+          name: replaced-pin95-deb
+          path: packages/*.deb
